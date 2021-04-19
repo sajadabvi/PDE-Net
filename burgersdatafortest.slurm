@@ -1,16 +1,20 @@
 #!/bin/bash
 #SBATCH -J eg1
-#SBATCH --qos=normal
-#SBATCH --partition=gpu
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=14
-#SBATCH --gres=gpu:1
-#SBATCH -t 8:00:00
+#SBATCH --cpus-per-task=18
+#SBATCH --gres=gpu:3
+#SBATCH -t 12:00:00
+#SBATCH -A PSYC0002
+#SBATCH -p qTRDGPUH
 
 cd `pwd`
 name='burgers-noise0.001'
 DEVICES=4
 REPEATSIZE=20
+
+source /home/users/mabavisani/anaconda3/bin/activate
+conda activate PDE-Net-2
+
 for ((i=0;i<$REPEATSIZE;i++))
 do
     DEVICENUM=`expr $i % $DEVICES`

@@ -1,11 +1,12 @@
 #!/bin/bash
 #SBATCH -J eg1
-#SBATCH --qos=short
-#SBATCH --partition=k80
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=18
 #SBATCH --gres=gpu:3
 #SBATCH -t 12:00:00
+#SBATCH -A PSYC0002
+#SBATCH -p qTRDGPUH
+
 
 cd `pwd`
 export MKL_NUM_THREADS=6
@@ -22,6 +23,9 @@ data_start_time=1
 DEVICES=4
 REPEATSIZE=20
 i=0
+
+source /home/users/mabavisani/anaconda3/bin/activate
+conda activate PDE-Net-2
 
 for constraint in ${CONSTRAINT[@]}; do
     for scheme in ${SCHEME[@]}; do

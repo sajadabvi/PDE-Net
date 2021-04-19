@@ -1,0 +1,170 @@
+--name=cdr-2-upwind-sparse0.005-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0,0,0-6,9,12,15,18,21,24,27,30,35,40 --dataname=cdr --constraint=2 --device=cuda:0 --stablize=0 --sparsity=0.005 --momentsparsity=0.001 --data_start_time=1 --dt=1e-2 --max_dt=1e-4 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001
+0
+--name=cdr-2-upwind-sparse0-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0,0,0-6,9,12,15,18,21,24,27,30,35,40 --dataname=cdr --constraint=2 --device=cuda:1 --stablize=0 --sparsity=0 --momentsparsity=0.001 --data_start_time=1 --dt=1e-2 --max_dt=1e-4 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001
+1
+--name=cdr-2-central-sparse0.005-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0,0,0-6,9,12,15,18,21,24,27,30,35,40 --dataname=cdr --constraint=2 --device=cuda:2 --stablize=0 --sparsity=0.005 --momentsparsity=0.001 --data_start_time=1 --dt=1e-2 --max_dt=1e-4 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001
+2
+--name=cdr-2-central-sparse0-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0,0,0-6,9,12,15,18,21,24,27,30,35,40 --dataname=cdr --constraint=2 --device=cuda:3 --stablize=0 --sparsity=0 --momentsparsity=0.001 --data_start_time=1 --dt=1e-2 --max_dt=1e-4 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001
+3
+wait
+{'--name': 'cdr-2-central-sparse0-noise0.001', '--dtype': 'double', '--device': 'cuda:3', '--constraint': '2', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24, 27, 30, 35, 40], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'cdr', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.0001, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u,v', '--freq': 4, '--data_start_time': 1.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.0, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+Traceback (most recent call last):
+  File "train.py", line 58, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+{'--name': 'cdr-2-upwind-sparse0.005-noise0.001', '--dtype': 'double', '--device': 'cuda:0', '--constraint': '2', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24, 27, 30, 35, 40], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'cdr', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.0001, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u,v', '--freq': 4, '--data_start_time': 1.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.005, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+block:  0
+name:  cdr-2-upwind-sparse0.005-noise0.001
+device:  cuda:0
+generate a random number to check random seed:  -1.1405643665206757
+current stage is: warmup
+u_obs shape: batchsize x channelNum x xgridsize x ygridsize
+torch.Size([28, 2, 32, 32])
+u_obs.abs().max()
+tensor(3.8505, device='cuda:0', dtype=torch.float64)
+u_obs variance
+tensor([1.0022, 0.1222, 0.0874, 0.0796, 0.0902, 0.1005, 0.5494, 0.0928, 0.0853,
+        0.0000, 0.0000, 0.0000], device='cuda:0', dtype=torch.float64,
+       grad_fn=<MeanBackward2>)
+cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    nfi.flat_param = xopt
+NameError: name 'xopt' is not defined
+{'--name': 'cdr-2-upwind-sparse0-noise0.001', '--dtype': 'double', '--device': 'cuda:1', '--constraint': '2', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24, 27, 30, 35, 40], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'cdr', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.0001, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u,v', '--freq': 4, '--data_start_time': 1.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.0, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+block:  0
+name:  cdr-2-upwind-sparse0-noise0.001
+device:  cuda:1
+generate a random number to check random seed:  -0.44937366582365407
+current stage is: warmup
+u_obs shape: batchsize x channelNum x xgridsize x ygridsize
+torch.Size([28, 2, 32, 32])
+u_obs.abs().max()
+tensor(3.8353, device='cuda:1', dtype=torch.float64)
+u_obs variance
+tensor([0.9972, 0.0730, 0.0985, 0.1038, 0.0901, 0.0975, 0.3951, 0.0954, 0.0750,
+        0.0000, 0.0000, 0.0000], device='cuda:1', dtype=torch.float64,
+       grad_fn=<MeanBackward2>)
+cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    nfi.flat_param = xopt
+NameError: name 'xopt' is not defined
+{'--name': 'cdr-2-central-sparse0.005-noise0.001', '--dtype': 'double', '--device': 'cuda:2', '--constraint': '2', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24, 27, 30, 35, 40], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'cdr', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.0001, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u,v', '--freq': 4, '--data_start_time': 1.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.005, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+block:  0
+name:  cdr-2-central-sparse0.005-noise0.001
+device:  cuda:2
+generate a random number to check random seed:  -2.5418814587156056
+current stage is: warmup
+u_obs shape: batchsize x channelNum x xgridsize x ygridsize
+torch.Size([28, 2, 32, 32])
+u_obs.abs().max()
+tensor(3.4707, device='cuda:2', dtype=torch.float64)
+u_obs variance
+tensor([1.0016, 0.0900, 0.0842, 0.1156, 0.0863, 0.0993, 0.5480, 0.0807, 0.0930,
+        0.0000, 0.0000, 0.0000], device='cuda:2', dtype=torch.float64,
+       grad_fn=<MeanBackward2>)
+cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    nfi.flat_param = xopt
+NameError: name 'xopt' is not defined
+--name=cdr-frozen-upwind-sparse0.005-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0,0,0-6,9,12,15,18,21,24,27,30,35,40 --dataname=cdr --constraint=frozen --device=cuda:0 --stablize=0 --sparsity=0.005 --momentsparsity=0.001 --data_start_time=1 --dt=1e-2 --max_dt=1e-4 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001
+0
+--name=cdr-frozen-upwind-sparse0-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0,0,0-6,9,12,15,18,21,24,27,30,35,40 --dataname=cdr --constraint=frozen --device=cuda:1 --stablize=0 --sparsity=0 --momentsparsity=0.001 --data_start_time=1 --dt=1e-2 --max_dt=1e-4 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001
+1
+--name=cdr-frozen-central-sparse0.005-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0,0,0-6,9,12,15,18,21,24,27,30,35,40 --dataname=cdr --constraint=frozen --device=cuda:2 --stablize=0 --sparsity=0.005 --momentsparsity=0.001 --data_start_time=1 --dt=1e-2 --max_dt=1e-4 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001
+2
+--name=cdr-frozen-central-sparse0-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0,0,0-6,9,12,15,18,21,24,27,30,35,40 --dataname=cdr --constraint=frozen --device=cuda:3 --stablize=0 --sparsity=0 --momentsparsity=0.001 --data_start_time=1 --dt=1e-2 --max_dt=1e-4 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001
+3
+wait
+{'--name': 'cdr-frozen-central-sparse0-noise0.001', '--dtype': 'double', '--device': 'cuda:3', '--constraint': 'frozen', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24, 27, 30, 35, 40], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'cdr', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.0001, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u,v', '--freq': 4, '--data_start_time': 1.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.0, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+Traceback (most recent call last):
+  File "train.py", line 58, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+{'--name': 'cdr-frozen-upwind-sparse0.005-noise0.001', '--dtype': 'double', '--device': 'cuda:0', '--constraint': 'frozen', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24, 27, 30, 35, 40], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'cdr', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.0001, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u,v', '--freq': 4, '--data_start_time': 1.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.005, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+block:  0
+name:  cdr-frozen-upwind-sparse0.005-noise0.001
+device:  cuda:0
+generate a random number to check random seed:  -1.2048473647754763
+current stage is: warmup
+u_obs shape: batchsize x channelNum x xgridsize x ygridsize
+torch.Size([28, 2, 32, 32])
+u_obs.abs().max()
+tensor(3.9434, device='cuda:0', dtype=torch.float64)
+u_obs variance
+tensor([1.0087, 0.0861, 0.0955, 0.0820, 0.0951, 0.0825, 0.4831, 0.1058, 0.0837,
+        0.0000, 0.0000, 0.0000], device='cuda:0', dtype=torch.float64,
+       grad_fn=<MeanBackward2>)
+cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    nfi.flat_param = xopt
+NameError: name 'xopt' is not defined
+{'--name': 'cdr-frozen-upwind-sparse0-noise0.001', '--dtype': 'double', '--device': 'cuda:1', '--constraint': 'frozen', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24, 27, 30, 35, 40], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'cdr', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.0001, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u,v', '--freq': 4, '--data_start_time': 1.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.0, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+block:  0
+name:  cdr-frozen-upwind-sparse0-noise0.001
+device:  cuda:1
+generate a random number to check random seed:  0.47943678968872694
+current stage is: warmup
+u_obs shape: batchsize x channelNum x xgridsize x ygridsize
+torch.Size([28, 2, 32, 32])
+u_obs.abs().max()
+tensor(3.9566, device='cuda:1', dtype=torch.float64)
+u_obs variance
+tensor([0.9864, 0.0963, 0.0893, 0.0853, 0.0791, 0.0888, 0.7284, 0.0796, 0.0905,
+        0.0000, 0.0000, 0.0000], device='cuda:1', dtype=torch.float64,
+       grad_fn=<MeanBackward2>)
+cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    nfi.flat_param = xopt
+NameError: name 'xopt' is not defined
+{'--name': 'cdr-frozen-central-sparse0.005-noise0.001', '--dtype': 'double', '--device': 'cuda:2', '--constraint': 'frozen', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 0, 0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24, 27, 30, 35, 40], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'cdr', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.0001, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u,v', '--freq': 4, '--data_start_time': 1.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.005, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+block:  0
+name:  cdr-frozen-central-sparse0.005-noise0.001
+device:  cuda:2
+generate a random number to check random seed:  1.090439007790979
+current stage is: warmup
+u_obs shape: batchsize x channelNum x xgridsize x ygridsize
+torch.Size([28, 2, 32, 32])
+u_obs.abs().max()
+tensor(3.6421, device='cuda:2', dtype=torch.float64)
+u_obs variance
+tensor([1.0111, 0.1020, 0.0897, 0.0801, 0.0796, 0.0797, 0.5259, 0.0963, 0.1064,
+        0.0000, 0.0000, 0.0000], device='cuda:2', dtype=torch.float64,
+       grad_fn=<MeanBackward2>)
+cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    nfi.flat_param = xopt
+NameError: name 'xopt' is not defined

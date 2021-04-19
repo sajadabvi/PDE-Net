@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J eg1
-#SBATCH --qos=normal
-#SBATCH --partition=gpu
+#SBATCH -A PSYC0002
+#SBATCH -p qTRDGPUH
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=14
 #SBATCH --gres=gpu:1
@@ -11,6 +11,8 @@ cd `pwd`
 name='heat-noise0.001'
 DEVICES=4
 REPEATSIZE=20
+source /home/users/mabavisani/anaconda3/bin/activate
+conda activate PDE-Net-2
 for ((i=0;i<$REPEATSIZE;i++))
 do
     DEVICENUM=`expr $i % $DEVICES`

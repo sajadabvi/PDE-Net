@@ -1,0 +1,4 @@
+--name=heat-2-upwind-sparse0.005-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0-6,9,12,15,18,21,24 --dataname=heat --constraint=2 --device=cuda:0 --stablize=0 --sparsity=0.005 --momentsparsity=0.001 --data_start_time=0 --dt=1e-2 --max_dt=1/1600 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001 --channel_names=u
+0
+--name=heat-frozen-upwind-sparse0.005-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0-6,9,12,15,18,21,24 --dataname=heat --constraint=frozen --device=cuda:1 --stablize=0 --sparsity=0.005 --momentsparsity=0.001 --data_start_time=0 --dt=1e-2 --max_dt=1/1600 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001 --channel_names=u
+1

@@ -7,7 +7,7 @@ from numpy import *
 import torch
 import matplotlib.pyplot as plt
 import conf
-name1 = 'burgers-frozen-upwind-sparse0.005-noise0.001'
+name1 = 'burgers-2-central-sparse0.005-noise0.001'
 name2 = 'burgers-2-upwind-sparse0.005-noise0.001'
 # name3 = 'burgers-2-stab0-sparse0-msparse0.001-datast1-size5-noise0.001'
 # name4 = 'coarseburgers'

@@ -1,11 +1,10 @@
 #!/bin/bash
 #SBATCH -J expression
-#SBATCH --qos=short
-#SBATCH -p geforce
-#SBATCH --nodelist=gpu01
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=24
 #SBATCH --gres=gpu:3
+#SBATCH -A PSYC0002
+#SBATCH -p qTRDGPUH
 #SBATCH -t 12:00:00
 
 cd `pwd`
@@ -22,6 +21,9 @@ noise=0.001
 data_start_time=1
 DEVICES=4
 i=0
+
+source /home/users/mabavisani/anaconda3/bin/activate
+conda activate PDE-Net-2
 
 for constraint in ${CONSTRAINT[@]}; do
     for scheme in ${SCHEME[@]}; do

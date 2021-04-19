@@ -1,8 +1,7 @@
 #!/bin/bash
 #SBATCH -J expression
-#SBATCH --qos=short
-#SBATCH -p geforce
-#SBATCH --nodelist=gpu01
+#SBATCH -A PSYC0002
+#SBATCH -p qTRDGPUM
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=24
 #SBATCH --gres=gpu:3
@@ -23,6 +22,9 @@ data_start_time=1
 DEVICES=4
 TRAINREPEATSIZE=24
 i=0
+
+source /home/users/mabavisani/anaconda3/bin/activate
+conda activate PDE-Net-2
 
 for sparsity in ${SPARSITY[@]}; do
     basename=${DATANAME}-${constraint}-${scheme}-sparse${sparsity}-noise${noise}
