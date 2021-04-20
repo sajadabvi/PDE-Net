@@ -1,0 +1,2316 @@
+repeat batch:0, select device:0
+burgers-2-upwind-sparse0.005-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+burgers-2-upwind-sparse0.005-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+burgers-2-upwind-sparse0.005-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+burgers-2-upwind-sparse0.005-noise0.001 3 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:4, select device:0
+burgers-2-upwind-sparse0.005-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+burgers-2-upwind-sparse0.005-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+burgers-2-upwind-sparse0.005-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+burgers-2-upwind-sparse0.005-noise0.001 7 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:8, select device:0
+burgers-2-upwind-sparse0.005-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+burgers-2-upwind-sparse0.005-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+burgers-2-upwind-sparse0.005-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+burgers-2-upwind-sparse0.005-noise0.001 11 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:12, select device:0
+burgers-2-upwind-sparse0.005-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+burgers-2-upwind-sparse0.005-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+burgers-2-upwind-sparse0.005-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+burgers-2-upwind-sparse0.005-noise0.001 15 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:16, select device:0
+burgers-2-upwind-sparse0.005-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+burgers-2-upwind-sparse0.005-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+burgers-2-upwind-sparse0.005-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+burgers-2-upwind-sparse0.005-noise0.001 19 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 17, in <module>
+    errs.append(torch.load('checkpoint/'+name+'/errs'+str(r)))
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-upwind-sparse0.005-noise0.001/errs0'
+repeat batch:0, select device:0
+burgers-2-upwind-sparse0-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+burgers-2-upwind-sparse0-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+burgers-2-upwind-sparse0-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+burgers-2-upwind-sparse0-noise0.001 3 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:4, select device:0
+burgers-2-upwind-sparse0-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+burgers-2-upwind-sparse0-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+burgers-2-upwind-sparse0-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+burgers-2-upwind-sparse0-noise0.001 7 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:8, select device:0
+burgers-2-upwind-sparse0-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+burgers-2-upwind-sparse0-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+burgers-2-upwind-sparse0-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+burgers-2-upwind-sparse0-noise0.001 11 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:12, select device:0
+burgers-2-upwind-sparse0-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+burgers-2-upwind-sparse0-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+burgers-2-upwind-sparse0-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+burgers-2-upwind-sparse0-noise0.001 15 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:16, select device:0
+burgers-2-upwind-sparse0-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+burgers-2-upwind-sparse0-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+burgers-2-upwind-sparse0-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+burgers-2-upwind-sparse0-noise0.001 19 cuda:3
+wait
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 17, in <module>
+    errs.append(torch.load('checkpoint/'+name+'/errs'+str(r)))
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-upwind-sparse0-noise0.001/errs0'
+repeat batch:0, select device:0
+burgers-2-central-sparse0.005-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+burgers-2-central-sparse0.005-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+burgers-2-central-sparse0.005-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+burgers-2-central-sparse0.005-noise0.001 3 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:4, select device:0
+burgers-2-central-sparse0.005-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+burgers-2-central-sparse0.005-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+burgers-2-central-sparse0.005-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+burgers-2-central-sparse0.005-noise0.001 7 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:8, select device:0
+burgers-2-central-sparse0.005-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+burgers-2-central-sparse0.005-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+burgers-2-central-sparse0.005-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+burgers-2-central-sparse0.005-noise0.001 11 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:12, select device:0
+burgers-2-central-sparse0.005-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+burgers-2-central-sparse0.005-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+burgers-2-central-sparse0.005-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+burgers-2-central-sparse0.005-noise0.001 15 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:16, select device:0
+burgers-2-central-sparse0.005-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+burgers-2-central-sparse0.005-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+burgers-2-central-sparse0.005-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+burgers-2-central-sparse0.005-noise0.001 19 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-2-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 17, in <module>
+    errs.append(torch.load('checkpoint/'+name+'/errs'+str(r)))
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0.005-noise0.001/errs0'
+repeat batch:0, select device:0
+burgers-2-central-sparse0-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+burgers-2-central-sparse0-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+burgers-2-central-sparse0-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+burgers-2-central-sparse0-noise0.001 3 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+repeat batch:4, select device:0
+burgers-2-central-sparse0-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+burgers-2-central-sparse0-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+burgers-2-central-sparse0-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+burgers-2-central-sparse0-noise0.001 7 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+repeat batch:8, select device:0
+burgers-2-central-sparse0-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+burgers-2-central-sparse0-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+burgers-2-central-sparse0-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+burgers-2-central-sparse0-noise0.001 11 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+repeat batch:12, select device:0
+burgers-2-central-sparse0-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+burgers-2-central-sparse0-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+burgers-2-central-sparse0-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+burgers-2-central-sparse0-noise0.001 15 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+repeat batch:16, select device:0
+burgers-2-central-sparse0-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+burgers-2-central-sparse0-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+burgers-2-central-sparse0-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+burgers-2-central-sparse0-noise0.001 19 cuda:3
+wait
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+configfile:  checkpoint/burgers-2-central-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 39, in <module>
+    callback.load(b)
+  File "/data/users2/sajad/code/PDE-Net/setcallback.py", line 86, in load
+    params = torch.load(filename, map_location=self.module.device)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/params/warmup-xopt-final'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 17, in <module>
+    errs.append(torch.load('checkpoint/'+name+'/errs'+str(r)))
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-2-central-sparse0-noise0.001/errs0'
+repeat batch:0, select device:0
+burgers-frozen-upwind-sparse0.005-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+burgers-frozen-upwind-sparse0.005-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+burgers-frozen-upwind-sparse0.005-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+burgers-frozen-upwind-sparse0.005-noise0.001 3 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:4, select device:0
+burgers-frozen-upwind-sparse0.005-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+burgers-frozen-upwind-sparse0.005-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+burgers-frozen-upwind-sparse0.005-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+burgers-frozen-upwind-sparse0.005-noise0.001 7 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:8, select device:0
+burgers-frozen-upwind-sparse0.005-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+burgers-frozen-upwind-sparse0.005-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+burgers-frozen-upwind-sparse0.005-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+burgers-frozen-upwind-sparse0.005-noise0.001 11 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:12, select device:0
+burgers-frozen-upwind-sparse0.005-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+burgers-frozen-upwind-sparse0.005-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+burgers-frozen-upwind-sparse0.005-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+burgers-frozen-upwind-sparse0.005-noise0.001 15 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:16, select device:0
+burgers-frozen-upwind-sparse0.005-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+burgers-frozen-upwind-sparse0.005-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+burgers-frozen-upwind-sparse0.005-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+burgers-frozen-upwind-sparse0.005-noise0.001 19 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 17, in <module>
+    errs.append(torch.load('checkpoint/'+name+'/errs'+str(r)))
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-frozen-upwind-sparse0.005-noise0.001/errs0'
+repeat batch:0, select device:0
+burgers-frozen-upwind-sparse0-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+burgers-frozen-upwind-sparse0-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+burgers-frozen-upwind-sparse0-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+burgers-frozen-upwind-sparse0-noise0.001 3 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:4, select device:0
+burgers-frozen-upwind-sparse0-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+burgers-frozen-upwind-sparse0-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+burgers-frozen-upwind-sparse0-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+burgers-frozen-upwind-sparse0-noise0.001 7 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:8, select device:0
+burgers-frozen-upwind-sparse0-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+burgers-frozen-upwind-sparse0-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+burgers-frozen-upwind-sparse0-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+burgers-frozen-upwind-sparse0-noise0.001 11 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:12, select device:0
+burgers-frozen-upwind-sparse0-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+burgers-frozen-upwind-sparse0-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+burgers-frozen-upwind-sparse0-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+burgers-frozen-upwind-sparse0-noise0.001 15 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:16, select device:0
+burgers-frozen-upwind-sparse0-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+burgers-frozen-upwind-sparse0-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+burgers-frozen-upwind-sparse0-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+burgers-frozen-upwind-sparse0-noise0.001 19 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-upwind-sparse0-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 17, in <module>
+    errs.append(torch.load('checkpoint/'+name+'/errs'+str(r)))
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'checkpoint/burgers-frozen-upwind-sparse0-noise0.001/errs0'
+repeat batch:0, select device:0
+burgers-frozen-central-sparse0.005-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+burgers-frozen-central-sparse0.005-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+burgers-frozen-central-sparse0.005-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+burgers-frozen-central-sparse0.005-noise0.001 3 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:4, select device:0
+burgers-frozen-central-sparse0.005-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+burgers-frozen-central-sparse0.005-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+burgers-frozen-central-sparse0.005-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+burgers-frozen-central-sparse0.005-noise0.001 7 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 42, in <module>
+    ut_infe = model(ut_infe, dt)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 85, in forward
+    return self.multistep(init, stepnum)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 153, in multistep
+    uadd = self.RightHandItems(u)
+  File "/data/users2/sajad/code/PDE-Net/polypde.py", line 127, in RightHandItems
+    G = grad([UaddTmp[k].sum(),], [U01Tmp[k],U10Tmp[k]])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/autograd/__init__.py", line 149, in grad
+    inputs, allow_unused)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+repeat batch:8, select device:0
+burgers-frozen-central-sparse0.005-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+burgers-frozen-central-sparse0.005-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+burgers-frozen-central-sparse0.005-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+burgers-frozen-central-sparse0.005-noise0.001 11 cuda:3
+wait
+configfile:  checkpoint/burgers-frozen-central-sparse0.005-noise0.001/options.yaml
+Traceback (most recent call last):
+  File "_test.py", line 21, in <module>
+    globalnames, callback, model, data_model, sampling, addnoise = setenv.setenv(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 68, in setenv
+    globalnames, callback, model = _set_model(options)
+  File "/data/users2/sajad/code/PDE-Net/setenv.py", line 45, in _set_model
+    model.to(globalnames['device'])
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 386, in to
+    return self._apply(convert)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 193, in _apply
+    module._apply(fn)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 205, in _apply
+    self._buffers[key] = fn(buf)
+  File "/home/users/mabavisani/anaconda3/envs/PDE-Net-2/lib/python3.7/site-packages/torch/nn/modules/module.py", line 384, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA error: invalid device ordinal

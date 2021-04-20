@@ -1,11 +1,11 @@
 #!/bin/bash
 #SBATCH -J eg1
-#SBATCH --qos=short
-#SBATCH --partition=k80
-#SBATCH --ntasks-per-node=1
+#SBATCH -p qTRDGPUL
+# SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=18
 #SBATCH --gres=gpu:3
 #SBATCH -t 12:00:00
+#SBATCH -A PSYC0002
 
 cd `pwd`
 export MKL_NUM_THREADS=6

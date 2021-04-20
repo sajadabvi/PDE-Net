@@ -1,7 +1,6 @@
 #!/bin/bash
 #SBATCH -J eg1
-#SBATCH --qos=short
-#SBATCH --partition=k80
+#SBATCH -p qTRDGPUM
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=18
 #SBATCH --gres=gpu:3

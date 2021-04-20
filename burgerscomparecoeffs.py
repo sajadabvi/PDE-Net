@@ -12,7 +12,7 @@ name2 = 'burgers-2-upwind-sparse0.005-noise0.001-block6'
 D = []
 D.append(torch.load('coeffs/burgers/'+name1)) # blue
 D.append(torch.load('coeffs/burgers/'+name2)) # orange
-# D.append(torch.load('checkpoint/'+name3+'/errs')) # red
+# D.append(torch.load('checkpoint/'+name3+'/c')) # red
 # D.append(torch.load('checkpoint/'+name4+'/errs')) # yellow
 
 coeffs0 = list(d['coeffs0'] for d in D)

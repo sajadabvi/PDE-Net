@@ -1,0 +1,1040 @@
+repeat batch:0, select device:0
+cdr-2-upwind-sparse0.005-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+cdr-2-upwind-sparse0.005-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+cdr-2-upwind-sparse0.005-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+cdr-2-upwind-sparse0.005-noise0.001 3 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:4, select device:0
+cdr-2-upwind-sparse0.005-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+cdr-2-upwind-sparse0.005-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+cdr-2-upwind-sparse0.005-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+cdr-2-upwind-sparse0.005-noise0.001 7 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:8, select device:0
+cdr-2-upwind-sparse0.005-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+cdr-2-upwind-sparse0.005-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+cdr-2-upwind-sparse0.005-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+cdr-2-upwind-sparse0.005-noise0.001 11 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:12, select device:0
+cdr-2-upwind-sparse0.005-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+cdr-2-upwind-sparse0.005-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+cdr-2-upwind-sparse0.005-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+cdr-2-upwind-sparse0.005-noise0.001 15 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:16, select device:0
+cdr-2-upwind-sparse0.005-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+cdr-2-upwind-sparse0.005-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+cdr-2-upwind-sparse0.005-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+cdr-2-upwind-sparse0.005-noise0.001 19 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:0, select device:0
+cdr-2-upwind-sparse0-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+cdr-2-upwind-sparse0-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+cdr-2-upwind-sparse0-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+cdr-2-upwind-sparse0-noise0.001 3 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:4, select device:0
+cdr-2-upwind-sparse0-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+cdr-2-upwind-sparse0-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+cdr-2-upwind-sparse0-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+cdr-2-upwind-sparse0-noise0.001 7 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:8, select device:0
+cdr-2-upwind-sparse0-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+cdr-2-upwind-sparse0-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+cdr-2-upwind-sparse0-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+cdr-2-upwind-sparse0-noise0.001 11 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:12, select device:0
+cdr-2-upwind-sparse0-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+cdr-2-upwind-sparse0-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+cdr-2-upwind-sparse0-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+cdr-2-upwind-sparse0-noise0.001 15 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:16, select device:0
+cdr-2-upwind-sparse0-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+cdr-2-upwind-sparse0-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+cdr-2-upwind-sparse0-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+cdr-2-upwind-sparse0-noise0.001 19 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:0, select device:0
+cdr-2-central-sparse0.005-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+cdr-2-central-sparse0.005-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+cdr-2-central-sparse0.005-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+cdr-2-central-sparse0.005-noise0.001 3 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:4, select device:0
+cdr-2-central-sparse0.005-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+cdr-2-central-sparse0.005-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+cdr-2-central-sparse0.005-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+cdr-2-central-sparse0.005-noise0.001 7 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:8, select device:0
+cdr-2-central-sparse0.005-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+cdr-2-central-sparse0.005-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+cdr-2-central-sparse0.005-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+cdr-2-central-sparse0.005-noise0.001 11 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:12, select device:0
+cdr-2-central-sparse0.005-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+cdr-2-central-sparse0.005-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+cdr-2-central-sparse0.005-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+cdr-2-central-sparse0.005-noise0.001 15 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:16, select device:0
+cdr-2-central-sparse0.005-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+cdr-2-central-sparse0.005-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+cdr-2-central-sparse0.005-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+cdr-2-central-sparse0.005-noise0.001 19 cuda:3
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:0, select device:0
+cdr-2-central-sparse0-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+cdr-2-central-sparse0-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+cdr-2-central-sparse0-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+cdr-2-central-sparse0-noise0.001 3 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:4, select device:0
+cdr-2-central-sparse0-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+cdr-2-central-sparse0-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+cdr-2-central-sparse0-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+cdr-2-central-sparse0-noise0.001 7 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:8, select device:0
+cdr-2-central-sparse0-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+cdr-2-central-sparse0-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+cdr-2-central-sparse0-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+cdr-2-central-sparse0-noise0.001 11 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:12, select device:0
+cdr-2-central-sparse0-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+cdr-2-central-sparse0-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+cdr-2-central-sparse0-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+cdr-2-central-sparse0-noise0.001 15 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:16, select device:0
+cdr-2-central-sparse0-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+cdr-2-central-sparse0-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+cdr-2-central-sparse0-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+cdr-2-central-sparse0-noise0.001 19 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:0, select device:0
+cdr-frozen-upwind-sparse0.005-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+cdr-frozen-upwind-sparse0.005-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+cdr-frozen-upwind-sparse0.005-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+cdr-frozen-upwind-sparse0.005-noise0.001 3 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:4, select device:0
+cdr-frozen-upwind-sparse0.005-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+cdr-frozen-upwind-sparse0.005-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+cdr-frozen-upwind-sparse0.005-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+cdr-frozen-upwind-sparse0.005-noise0.001 7 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:8, select device:0
+cdr-frozen-upwind-sparse0.005-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+cdr-frozen-upwind-sparse0.005-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+cdr-frozen-upwind-sparse0.005-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+cdr-frozen-upwind-sparse0.005-noise0.001 11 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:12, select device:0
+cdr-frozen-upwind-sparse0.005-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+cdr-frozen-upwind-sparse0.005-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+cdr-frozen-upwind-sparse0.005-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+cdr-frozen-upwind-sparse0.005-noise0.001 15 cuda:3
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:16, select device:0
+cdr-frozen-upwind-sparse0.005-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+cdr-frozen-upwind-sparse0.005-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+cdr-frozen-upwind-sparse0.005-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+cdr-frozen-upwind-sparse0.005-noise0.001 19 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:0, select device:0
+cdr-frozen-upwind-sparse0-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+cdr-frozen-upwind-sparse0-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+cdr-frozen-upwind-sparse0-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+cdr-frozen-upwind-sparse0-noise0.001 3 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:4, select device:0
+cdr-frozen-upwind-sparse0-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+cdr-frozen-upwind-sparse0-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+cdr-frozen-upwind-sparse0-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+cdr-frozen-upwind-sparse0-noise0.001 7 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:8, select device:0
+cdr-frozen-upwind-sparse0-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+cdr-frozen-upwind-sparse0-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+cdr-frozen-upwind-sparse0-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+cdr-frozen-upwind-sparse0-noise0.001 11 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:12, select device:0
+cdr-frozen-upwind-sparse0-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+cdr-frozen-upwind-sparse0-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+cdr-frozen-upwind-sparse0-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+cdr-frozen-upwind-sparse0-noise0.001 15 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:16, select device:0
+cdr-frozen-upwind-sparse0-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+cdr-frozen-upwind-sparse0-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+cdr-frozen-upwind-sparse0-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+cdr-frozen-upwind-sparse0-noise0.001 19 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:0, select device:0
+cdr-frozen-central-sparse0.005-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+cdr-frozen-central-sparse0.005-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+cdr-frozen-central-sparse0.005-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+cdr-frozen-central-sparse0.005-noise0.001 3 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:4, select device:0
+cdr-frozen-central-sparse0.005-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+cdr-frozen-central-sparse0.005-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+cdr-frozen-central-sparse0.005-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+cdr-frozen-central-sparse0.005-noise0.001 7 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:8, select device:0
+cdr-frozen-central-sparse0.005-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+cdr-frozen-central-sparse0.005-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+cdr-frozen-central-sparse0.005-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+cdr-frozen-central-sparse0.005-noise0.001 11 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:12, select device:0
+cdr-frozen-central-sparse0.005-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+cdr-frozen-central-sparse0.005-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+cdr-frozen-central-sparse0.005-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+cdr-frozen-central-sparse0.005-noise0.001 15 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:16, select device:0
+cdr-frozen-central-sparse0.005-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+cdr-frozen-central-sparse0.005-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+cdr-frozen-central-sparse0.005-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+cdr-frozen-central-sparse0.005-noise0.001 19 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:0, select device:0
+cdr-frozen-central-sparse0-noise0.001 0 cuda:0
+repeat batch:1, select device:1
+cdr-frozen-central-sparse0-noise0.001 1 cuda:1
+repeat batch:2, select device:2
+cdr-frozen-central-sparse0-noise0.001 2 cuda:2
+repeat batch:3, select device:3
+cdr-frozen-central-sparse0-noise0.001 3 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:4, select device:0
+cdr-frozen-central-sparse0-noise0.001 4 cuda:0
+repeat batch:5, select device:1
+cdr-frozen-central-sparse0-noise0.001 5 cuda:1
+repeat batch:6, select device:2
+cdr-frozen-central-sparse0-noise0.001 6 cuda:2
+repeat batch:7, select device:3
+cdr-frozen-central-sparse0-noise0.001 7 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:8, select device:0
+cdr-frozen-central-sparse0-noise0.001 8 cuda:0
+repeat batch:9, select device:1
+cdr-frozen-central-sparse0-noise0.001 9 cuda:1
+repeat batch:10, select device:2
+cdr-frozen-central-sparse0-noise0.001 10 cuda:2
+repeat batch:11, select device:3
+cdr-frozen-central-sparse0-noise0.001 11 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:12, select device:0
+cdr-frozen-central-sparse0-noise0.001 12 cuda:0
+repeat batch:13, select device:1
+cdr-frozen-central-sparse0-noise0.001 13 cuda:1
+repeat batch:14, select device:2
+cdr-frozen-central-sparse0-noise0.001 14 cuda:2
+repeat batch:15, select device:3
+cdr-frozen-central-sparse0-noise0.001 15 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+repeat batch:16, select device:0
+cdr-frozen-central-sparse0-noise0.001 16 cuda:0
+repeat batch:17, select device:1
+cdr-frozen-central-sparse0-noise0.001 17 cuda:1
+repeat batch:18, select device:2
+cdr-frozen-central-sparse0-noise0.001 18 cuda:2
+repeat batch:19, select device:3
+cdr-frozen-central-sparse0-noise0.001 19 cuda:3
+wait
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+Traceback (most recent call last):
+  File "_test.py", line 3, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+aggregate errs
+Traceback (most recent call last):
+  File "test.py", line 4, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'

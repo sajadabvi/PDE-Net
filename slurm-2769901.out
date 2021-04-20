@@ -2,3 +2,39 @@
 0
 --name=heat-frozen-upwind-sparse0.005-noise0.001 --kernel_size=5 --viscosity=0.1 --blocks=0-6,9,12,15,18,21,24 --dataname=heat --constraint=frozen --device=cuda:1 --stablize=0 --sparsity=0.005 --momentsparsity=0.001 --data_start_time=0 --dt=1e-2 --max_dt=1/1600 --hidden_layers=5 --start_noise=0.001 --end_noise=0.001 --channel_names=u
 1
+{'--name': 'heat-frozen-upwind-sparse0.005-noise0.001', '--dtype': 'double', '--device': 'cuda:1', '--constraint': 'frozen', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'heat', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.000625, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u', '--freq': 4, '--data_start_time': 0.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.005, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+block:  0
+name:  heat-frozen-upwind-sparse0.005-noise0.001
+device:  cuda:1
+generate a random number to check random seed:  0.3345555850205578
+current stage is: warmup
+u_obs shape: batchsize x channelNum x xgridsize x ygridsize
+torch.Size([28, 1, 32, 32])
+u_obs.abs().max()
+tensor(3.7136, device='cuda:1', dtype=torch.float64)
+u_obs variance
+tensor([0.0942, 0.1097, 0.0886, 0.0159, 0.0171, 0.0139], device='cuda:1',
+       dtype=torch.float64, grad_fn=<MeanBackward2>)
+cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    nfi.flat_param = xopt
+NameError: name 'xopt' is not defined
+{'--name': 'heat-2-upwind-sparse0.005-noise0.001', '--dtype': 'double', '--device': 'cuda:0', '--constraint': '2', '--dt': 0.01, '--cell_num': 1, '--eps': 6.283185307179586, '--blocks': [0, 1, 2, 3, 4, 5, 6, 9, 12, 15, 18, 21, 24], '--kernel_size': 5, '--max_order': 2, '--dx': 0.19634954084936207, '--hidden_layers': 5, '--scheme': 'upwind', '--dataname': 'heat', '--viscosity': 0.1, '--zoom': 4, '--max_dt': 0.000625, '--batch_size': 28, '--data_timescheme': 'rk2', '--channel_names': 'u', '--freq': 4, '--data_start_time': 0.0, '--start_noise': 0.001, '--end_noise': 0.001, '--stablize': 0.0, '--sparsity': 0.005, '--momentsparsity': 0.001, '--npseed': -1, '--torchseed': -1, '--maxiter': 2000, '--recordfile': 'None', '--recordcycle': 200, '--savecycle': -1, '--start_from': -1}
+block:  0
+name:  heat-2-upwind-sparse0.005-noise0.001
+device:  cuda:0
+generate a random number to check random seed:  -1.4437185623458342
+current stage is: warmup
+u_obs shape: batchsize x channelNum x xgridsize x ygridsize
+torch.Size([28, 1, 32, 32])
+u_obs.abs().max()
+tensor(3.8784, device='cuda:0', dtype=torch.float64)
+u_obs variance
+tensor([0.0768, 0.1197, 0.0668, 0.0139, 0.0169, 0.0184], device='cuda:0',
+       dtype=torch.float64, grad_fn=<MeanBackward2>)
+cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-hv8qeyyw/aten/src/THC/THCBlas.cu:348
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    nfi.flat_param = xopt
+NameError: name 'xopt' is not defined
